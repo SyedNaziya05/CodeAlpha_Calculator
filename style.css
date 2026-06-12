@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.calculator {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 320px;
+}
+
+/* Display */
+.display {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: right;
+  margin-bottom: 20px;
+  min-height: 90px;
+}
+
+.previous {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  min-height: 20px;
+  margin-bottom: 5px;
+}
+
+.current {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 300;
+  word-break: break-all;
+}
+
+/* Buttons Grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 18px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button.operator {
+  background: rgba(82, 130, 255, 0.4);
+  color: #7eb3ff;
+}
+
+button.operator:hover {
+  background: rgba(82, 130, 255, 0.6);
+}
+
+button.equals {
+  background: linear-gradient(135deg, #5282ff, #a855f7);
+  color: white;
+  font-size: 22px;
+}
+
+button.equals:hover {
+  background: linear-gradient(135deg, #6b96ff, #b870f7);
+  box-shadow: 0 5px 15px rgba(82, 130, 255, 0.4);
+}
+
+button.span-two {
+  grid-column: span 2;
+}
